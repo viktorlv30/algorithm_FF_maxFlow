@@ -70,9 +70,10 @@ namespace algorithm_FF_maxFlow
                     }
                 }
             }
-            if (color[end] == (int)Vertices.BLACK) // Если конечная вершина, дошли - возвращаем 0
+            if ( color[end] == (int)Vertices.BLACK ) // Если конечная вершина, дошли - возвращаем 0
                 return 0;
-            else return 1;
+            else
+                return 1;
         }
 
         //Максимальный поток из истока в сток
