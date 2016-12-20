@@ -20,21 +20,14 @@ namespace GraphFlowExample
             Edges = new Dictionary<string, Edge>();
         }
 
-
-
         void ParseData()
         {
             Reset();
 
-            /** 
-             * Example graph reference
-             * http://www.cs.princeton.edu/%7Ewayne/kleinberg-tardos/07demo-maxflow.ppt 
-             * 
-             * Put your graph info here
-             */
             var names = new[]
             {
-                "dummy", "s", //1
+                "dummy",
+                "s", //1
                 "B-15", "A-16", "B-16", //2, 3, 4
                 "English", "C/C++", "Java", "JS", //5, 6, 7, 8
                 "Ira", "Alla", "Vika", "Yarik", "Sasha", "Andriy", "Igor", "Yura", //9, 10, 11, 12, 13, 14, 15, 16
@@ -341,7 +334,7 @@ namespace GraphFlowExample
                 {
                     var node = edge.NodeTo;
                     if (edge.Capacity > 0)
-                        sb.Append(node.Name + "C" + edge.Capacity + " ");
+                        sb.Append(node.Name + "->C" + edge.Capacity + " ");
                 }
                 return sb.ToString();
             }
